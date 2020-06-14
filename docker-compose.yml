@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.7'
 #MAINTAINER: max-30ru@mail.ru
 services:
   db:
@@ -12,6 +12,7 @@ services:
     volumes:
       - ./data/:/var/lib/postgresql/data/
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf.conf
+      - ./init_script/:/docker-entrypoint-initdb.d/
 
     command: postgres -c config_file=/etc/postgresql/postgresql.conf.conf
     ports:

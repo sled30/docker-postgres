@@ -53,3 +53,4 @@ create table file (
 );
 
 insert into phone(id, phone) values(1, 0);
+insert into email(id, email) values(1, 0);
