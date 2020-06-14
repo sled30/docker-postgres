@@ -1,9 +1,7 @@
-version: '3.7'
+version: '3.6'
 #MAINTAINER: max-30ru@mail.ru
 services:
   db:
-    #build:
-    #  context: ./db
     image: postgres:12.2
     environment:
       POSTGRES_PASSWORD: test
@@ -16,13 +14,3 @@ services:
 
     command: postgres -c config_file=/etc/postgresql/postgresql.conf.conf
     ports:
-      - 5432:5432
-
-
-  #
-  #
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 8080:8080
